@@ -20,8 +20,9 @@ function countOfCompleteDecks(cardsArr, numberOfUniqueCards) {
 
 //vrsta špila
 const deckSize = 52;
+const numberOfRandomCards = 500;
 //random input karata
-const inputCards = Array.from({ length: 500 }, () =>
+const inputCards = Array.from({ length: numberOfRandomCards }, () =>
   Math.floor(Math.random() * deckSize + 1)
 );
 
