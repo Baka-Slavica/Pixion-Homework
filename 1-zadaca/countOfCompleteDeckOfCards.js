@@ -25,7 +25,7 @@ const inputCards = Array.from({ length: 500 }, () =>
   Math.floor(Math.random() * deckSize + 1)
 );
 
-result = countOfCompleteDecks(inputCards, deckSize);
+const result = countOfCompleteDecks(inputCards, deckSize);
 
 console.log(
   result === 0
