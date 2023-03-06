@@ -13,8 +13,6 @@ function countOfCompleteDecks(cardsArr, numberOfUniqueCards) {
       : countOfEachCard[cardsArr[i]]++;
   }
 
-  console.log(countOfEachCard);
-
   return Object.keys(countOfEachCard).length !== numberOfUniqueCards
     ? 0
     : Math.min(...Object.values(countOfEachCard));
@@ -27,12 +25,10 @@ const inputCards = Array.from({ length: 500 }, () =>
   Math.floor(Math.random() * deckSize + 1)
 );
 
-console.log(inputCards);
+result = countOfCompleteDecks(inputCards, deckSize);
 
 console.log(
-  countOfCompleteDecks(inputCards, deckSize) === 0
+  result === 0
     ? "We can't make any decks"
-    : "We can make " +
-        countOfCompleteDecks(inputCards, deckSize) +
-        " complete decks"
+    : "We can make " + result + " complete decks"
 );
